@@ -1,0 +1,23 @@
+.navbar-nav {
+  margin: 0 auto;
+}
+
+.card {
+  width: 100%; /* 카드 너비를 부모 요소에 맞춤 */
+  height: 400px; /* 고정된 높이 */
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 텍스트를 중앙에 정렬 */
+  text-align: center; /* 텍스트를 가운데 정렬 */
+}
+
+.card-img-top {
+  height: 300px;
+  object-fit: cover; /* 이미지 비율 유지 */
+  width: 100%;
+  display: block;
+  margin-top: 10px;
+}

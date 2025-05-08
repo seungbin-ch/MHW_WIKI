@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monster Hunter Wilds WIKI</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.17/fullpage.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 네비게이션 바 -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Monster Hunter Wilds WIKI</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#monsters">Monster</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#weapon">Weapon</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#armor">Armor</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#item">Item</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#community">Community</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 원페이지 스타일 -->
+    <div id="fullpage">
+      <!-- 섹션 1: Home -->
+      <div class="section" id="section1">
+        <h1 class="text-center">Welcome to Monster Hunter Wilds WIKI</h1>
+      </div>
+
+      <!-- 섹션 2: 몬스터 카드 리스트 -->
+      <div class="section" id="section2">
+        <div class="container my-5">
+          <h1 class="text-center mb-4">Monsters</h1>
+          <input
+            type="text"
+            id="monsterSearch"
+            placeholder="Search Monsters..."
+            class="form-control mb-4"
+          />
+          <div class="row row-cols-1 row-cols-md-4 g-4" id="monsterGrid">
+            <!-- 카드들이 동적으로 추가 -->
+          </div>
+          <div class="d-flex justify-content-center mt-4">
+            <button id="prevPage" class="btn btn-secondary me-2" disabled>
+              Previous
+            </button>
+            <button id="nextPage" class="btn btn-primary">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 섹션 3: Weapon -->
+      <div class="section" id="section3">
+        <h1 class="text-center">Weapon</h1>
+      </div>
+
+      <!-- 섹션 4: Armor -->
+      <div class="section" id="section4">
+        <h1 class="text-center">Armor</h1>
+      </div>
+
+      <!-- 섹션 5: Item -->
+      <div class="section" id="section5">
+        <h1 class="text-center">Item</h1>
+      </div>
+
+      <!-- 섹션 6: Community -->
+      <div class="section" id="section6">
+        <h1 class="text-center">Community</h1>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.17/fullpage.js"></script>
+    <script src="script.js"></script>
+    <script>
+      new fullpage("#fullpage", {
+        autoScrolling: true,
+        navigation: true,
+        anchors: ["home", "monsters", "weapon", "armor", "item", "community"],
+        navigationTooltips: [
+          "Home",
+          "Monsters",
+          "Weapon",
+          "Armor",
+          "Item",
+          "Community",
+        ],
+        showActiveTooltip: true,
+      });
+    </script>
+  </body>
+</html>
